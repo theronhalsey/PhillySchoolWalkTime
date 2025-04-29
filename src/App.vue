@@ -15,6 +15,9 @@ import HomePage from './components/HomePage.vue'
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/ElemSchool">Elementary School</RouterLink>
+        <RouterLink to="/MiddleSchool">Middle School</RouterLink>
+        <RouterLink to="/HighSchool">High School</RouterLink>
       </nav>
     </div>
   </header>
