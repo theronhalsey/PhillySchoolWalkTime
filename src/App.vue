@@ -25,7 +25,7 @@ import PageHeader from './components/PageHeader.vue'
 <style scoped>
 #header {
   position: fixed;
-  top: 2rem;
+  top: 1rem;
   left: 0;
   line-height: 1.5;
   max-height: 100vh;
@@ -76,10 +76,7 @@ nav a:first-of-type {
   text-align: center;
 }
 
-@media (max-width: 1280px) {
-  #header {
-    top: 1rem;
-  }
+@media (max-width: 1880px) {
 
   nav {
     text-align: left;
@@ -100,9 +97,6 @@ nav a:first-of-type {
 }
 
 @media (max-width: 810px) {
-  #header {
-    top: 1rem;
-  }
 
   nav {
     text-align: left;
@@ -142,6 +136,29 @@ nav a:first-of-type {
     height: 72%;
     place-items: center;
     transform: translate(-7%, 7.5%);
+  }
+}
+
+@media (max-width: 350px) {
+  #header {
+    top: 0.25rem;
+  }
+
+  nav {
+    text-align: left;
+    margin-left: 0rem;
+    font-size: 0.5rem;
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
+
+  #main {
+    position: fixed;
+    margin: auto;
+    width: 95%;
+    height: 60%;
+    place-items: center;
+    transform: translate(-8%, 10%);
   }
 }
 </style>

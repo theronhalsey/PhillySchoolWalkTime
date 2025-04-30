@@ -32,4 +32,10 @@ h1 {
     font-size: 1rem;
   }
 }
+
+@media (max-width: 350px) {
+  h1 {
+    font-size: .85rem;
+  }
+}
 </style>
