@@ -77,41 +77,20 @@ nav a:first-of-type {
 }
 
 @media (max-width: 1880px) {
-
   nav {
-    text-align: left;
-    margin-left: -1rem;
     font-size: 1.5rem;
-    padding: 1rem 0;
     margin-top: 1rem;
   }
-
   #main {
-    position: fixed;
-    margin: auto;
-    width: 100%;
     height: 70%;
-    place-items: center;
     transform: translate(-50%, -45%);
   }
 }
 
 @media (max-width: 810px) {
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1.5rem;
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-
   #main {
-    position: fixed;
-    margin: auto;
     width: 97%;
     height: 72%;
-    place-items: center;
     transform: translate(-2.5%, 15%);
   }
 }
@@ -120,45 +99,40 @@ nav a:first-of-type {
   #header {
     top: 0.5rem;
   }
-
   nav {
-    text-align: left;
     margin-left: 0rem;
     font-size: 0.7rem;
-    padding: 1rem 0;
-    margin-top: 1rem;
   }
-
   #main {
-    position: fixed;
-    margin: auto;
-    width: 97%;
-    height: 72%;
-    place-items: center;
     transform: translate(-7%, 7.5%);
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 370px) {
+  #header {
+    top: 0.5rem;
+  }
+  nav {
+    font-size: 0.6rem;
+  }
+  #main {
+    height: 70%;
+    transform: translate(-7%, 7%);
+  }
+}
+
+@media (max-width: 330px) {
   #header {
     top: 0.25rem;
   }
-
   nav {
-    text-align: left;
-    margin-left: 0rem;
     font-size: 0.5rem;
-    padding: 1rem 0;
-    margin-top: 1rem;
   }
-
   #main {
-    position: fixed;
-    margin: auto;
     width: 95%;
     height: 60%;
-    place-items: center;
     transform: translate(-8%, 10%);
   }
 }
+
 </style>

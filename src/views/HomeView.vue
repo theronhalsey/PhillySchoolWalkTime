@@ -34,4 +34,34 @@ h3 {
   width: 75%;
   transform: translate(0%, 250%);
 }
+
+@media (max-width: 1880px) {
+  h3 {
+    transform: translate(0%, 200%);
+  }
+}
+
+@media (max-width: 810px) {
+  h3 {
+    transform: translate(0%, 50%);
+  }
+}
+
+@media (max-width: 400px) {
+  h3 {
+    transform: translate(0%, 45%);
+  }
+}
+
+@media (max-width: 370px) {
+  h3 {
+    transform: translate(0%, 35%);
+  }
+}
+
+@media (max-width: 350px) {
+  h3 {
+    transform: translate(0%, 5%);
+  }
+}
 </style>
