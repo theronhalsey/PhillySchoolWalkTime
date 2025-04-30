@@ -18,7 +18,7 @@ const router = createRouter({
       component: ElemSchoolView,
     },
     {
-      path: '/MidSchool',
+      path: '/MiddleSchool',
       name: 'Middle School',
       component: MidSchoolView,
     },

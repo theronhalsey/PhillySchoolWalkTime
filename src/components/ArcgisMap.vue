@@ -12,7 +12,7 @@ export default {
     portalItemId: { type: String, required: true },
   },
   methods: {
-    getWebMap() {
+    async getWebMap() {
       const webmap = new WebMap({
         portalItem: {
           id: this.portalItemId,
@@ -20,23 +20,17 @@ export default {
       })
       const mapview = new MapView({
         map: webmap,
-        container: 'viewDiv',
+        container: this.$el,
       })
-      return mapview
-    },
-    async initialize(mapview: MapView, container: HTMLDivElement) {
-      mapview.container = container
       try {
         await mapview.when()
-        console.log('Map and View are ready')
       } catch (error) {
-        console.warn('An error in creating the map occurred:', error)
+        console.warn('Failed to get map for ArcGIS:', error)
       }
     },
   }, // end of methods
   mounted() {
-    const map = this.getWebMap()
-    this.initialize(map, this.$el)
+    this.getWebMap()
   },
 } // end of export
 </script>

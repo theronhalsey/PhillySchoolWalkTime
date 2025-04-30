@@ -4,17 +4,15 @@ import HomePage from './components/HomePage.vue'
 </script>
 
 <template>
-  <header></header>
-
   <div id="header">
     <HomePage
       msg="How long does it take for students in Philadelphia to walk to their neighborhood school?"
     />
   </div>
 
-  <body>
+  <div id="main">
     <RouterView />
-  </body>
+  </div>
 
   <nav id="footer">
     <RouterLink to="/">Home</RouterLink>
@@ -27,18 +25,26 @@ import HomePage from './components/HomePage.vue'
 <style scoped>
 #header {
   position: fixed;
+  top: 0;
+  left: 0;
   line-height: 1.5;
   max-height: 100vh;
+  width: 100%;
+  place-items: center;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+#main {
+  position: fixed;
+  margin: auto;
+  width: 100%;
+  height: 75%;
+  place-items: center;
+  transform: translate(-50%, -50%);
 }
 
 nav {
   width: 100%;
-  font-size: 12px;
+  font-size: 2rem;
   text-align: center;
   margin-top: 2rem;
 }
@@ -61,37 +67,21 @@ nav a:first-of-type {
   border: 0;
 }
 
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
 @media (min-width: 1024px) {
-  #header {
-    display: flex;
-    place-items: center;
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
   nav {
     text-align: left;
     margin-left: -1rem;
-    font-size: 1rem;
-
+    font-size: 2rem;
     padding: 1rem 0;
     margin-top: 1rem;
-  }
-
-  #footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
   }
 }
 </style>
