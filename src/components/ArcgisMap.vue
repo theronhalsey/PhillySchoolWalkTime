@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div id="map"></div>
 </template>
 
 <script lang="ts">
@@ -34,3 +34,12 @@ export default {
   },
 } // end of export
 </script>
+
+<style scoped>
+#map {
+  place-items: center;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+</style>
