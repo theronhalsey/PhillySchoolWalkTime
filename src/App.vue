@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HomePage from './components/HomePage.vue'
+import PageHeader from './components/PageHeader.vue'
 </script>
 
 <template>
   <div id="header">
-    <HomePage
+    <PageHeader
       msg="How long does it take for students in Philadelphia to walk to their neighborhood school?"
     />
   </div>
