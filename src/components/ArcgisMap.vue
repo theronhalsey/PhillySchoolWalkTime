@@ -37,9 +37,7 @@ export default {
 
 <style scoped>
 #map {
-  place-items: center;
-  margin: auto;
-  width: 100%;
-  height: 100%;
+  width: 95vw;
+  height: 80vh;
 }
 </style>
