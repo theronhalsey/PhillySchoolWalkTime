@@ -28,12 +28,11 @@ import PageHeader from './components/PageHeader.vue'
 
 <style scoped>
 #body {
+  margin-top: 6vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vmin;
-  min-width: 100vmin;
-  place-items: center;
-  justify-content: center;
+  height: 89vh;
+  min-width: 100vw;
 }
 
 #header {
@@ -46,7 +45,6 @@ import PageHeader from './components/PageHeader.vue'
 }
 
 #main {
-  margin: 5vh 10vh 10vh 10vh;
   place-items: center;
 }
 
@@ -61,7 +59,6 @@ nav {
   font-size: 3vh;
   width: 100%;
   text-align: center;
-  margin-bottom: 0.5vh;
 }
 
 nav a.router-link-exact-active {

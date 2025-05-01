@@ -31,11 +31,16 @@
 h3 {
   font-size: 1.5rem;
   text-align: center;
-  margin-top: 30vh;
-  margin-bottom: 70vh;
+  margin-top: 35vh;
   margin-left: auto;
   margin-right: auto;
   width: 75%;
+}
+
+@media (max-width: 1100px) {
+  h3 {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 800px) {
