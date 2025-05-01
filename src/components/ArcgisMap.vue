@@ -26,20 +26,6 @@ export default {
       })
       try {
         await mapview.when()
-        const featureLayer: __esri.Layer = webmap.layers.getItemAt(0)!
-
-        const legend = new Legend({
-          view: mapview,
-          layerInfos: [
-            {
-              layer: featureLayer,
-              title: this.layerName,
-            },
-          ],
-        })
-
-        // Add widget to the bottom right corner of the view
-        mapview.ui.add(legend, 'bottom-right')
       } catch (error) {
         console.warn('Failed to get map for ArcGIS:', error)
       }
