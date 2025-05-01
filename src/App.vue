@@ -1,8 +1,3 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import PageHeader from './components/PageHeader.vue'
-</script>
-
 <template>
   <div id="header">
     <PageHeader
@@ -11,7 +6,7 @@ import PageHeader from './components/PageHeader.vue'
   </div>
 
   <div id="main">
-    <RouterView />
+    <RouterView :key="$route.fullPath"/>
   </div>
 
   <nav id="footer">
@@ -21,6 +16,11 @@ import PageHeader from './components/PageHeader.vue'
     <RouterLink to="/HighSchool">High School</RouterLink>
   </nav>
 </template>
+
+<script setup lang="ts">
+import { RouterLink, RouterView } from 'vue-router'
+import PageHeader from './components/PageHeader.vue'
+</script>
 
 <style scoped>
 #header {
@@ -134,5 +134,4 @@ nav a:first-of-type {
     transform: translate(-8%, 10%);
   }
 }
-
 </style>

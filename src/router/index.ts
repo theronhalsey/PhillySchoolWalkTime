@@ -1,8 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import ElemSchoolView from '@/views/ElemSchoolView.vue'
-import MidSchoolView from '@/views/MidSchoolView.vue'
-import HighSchoolView from '@/views/HighSchoolView.vue'
+import ArcgisMap from '@/components/ArcgisMap.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,17 +13,28 @@ const router = createRouter({
     {
       path: '/ElemSchool',
       name: 'Elementary School',
-      component: ElemSchoolView,
+      component: ArcgisMap,
+      props: {
+        portalItemId: 'bab38676b43e46fdabc07cc09ea4b902'
+      }
     },
     {
       path: '/MiddleSchool',
       name: 'Middle School',
-      component: MidSchoolView,
+      component: ArcgisMap,
+      props: {
+        portalItemId: '8678b6de36ed4cf99af2211d389b27a2'
+
+      }
     },
     {
       path: '/HighSchool',
       name: 'High School',
-      component: HighSchoolView,
+      component: ArcgisMap,
+      props: {
+        portalItemId: '0f68138b20534b8ab803aed01b81c76d'
+
+      }
     },
   ],
 })
