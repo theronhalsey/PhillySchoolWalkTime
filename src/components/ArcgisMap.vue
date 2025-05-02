@@ -1,5 +1,7 @@
 <template>
-  <div id="map"></div>
+  <div id="map">
+    <div id="legend"></div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -26,6 +28,20 @@ export default {
       })
       try {
         await mapview.when()
+        mapview.ui.remove(mapview.ui.getComponents())
+        mapview.ui.container = document.getElementById("legend")
+        const featureLayer: __esri.Layer = webmap.layers.getItemAt(0)!
+        const legend = new Legend({
+          view: mapview,
+          layerInfos: [
+            {
+              layer: featureLayer,
+              title: this.layerName,
+            },
+          ],
+        })
+        mapview.ui.add(legend, 'top-right')
+
       } catch (error) {
         console.warn('Failed to get map for ArcGIS:', error)
       }
@@ -40,6 +56,15 @@ export default {
 <style scoped>
 #map {
   width: 95vw;
-  height: 80vh;
+  height: 89vh;
+}
+
+#legend {
+  background-color: grey;
+  height: 23vh;
+  width: 18vh;
+  position: fixed;
+  margin-top: 7vh;
+  margin-left: 5vh;
 }
 </style>
