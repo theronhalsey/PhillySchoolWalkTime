@@ -1,6 +1,6 @@
 # PhillySchoolWalkTime
 
-This template should help get you started developing with Vue 3 in Vite.
+Displays maps generated with ArcGIS Online showing how long it would take for a student to walk to their neighborhood school based on their catchment. Zones around the schools are regions of 5, 10, 15, and 20 minute zones.
 
 ## Recommended IDE Setup
 
