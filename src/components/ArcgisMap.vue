@@ -60,11 +60,53 @@ export default {
 }
 
 #legend {
-  background-color: grey;
-  height: 23vh;
-  width: 18vh;
-  position: fixed;
+  color: black;
+  background-color: gainsboro;
+  border: 3px;
+  border-style: solid;
+  border-color: black;
+  height: fit-content;
+  width: fit-content;
+  position: absolute;
   margin-top: 7vh;
-  margin-left: 5vh;
+  margin-left: 3vw;
+}
+
+
+@media (max-width: 1400px) {
+  #legend {
+    margin-left: 1vw;
+  }
+}
+
+@media (max-width: 800px) {
+  #legend {
+    transform: scale(.8, .8);
+    margin-top: 4vh;
+    margin-left: 0vw;
+  }
+}
+
+@media (max-width: 500px) {
+  #legend {
+    transform: scale(.6, .6);
+    margin-top: 0.5vh;
+    margin-left: -7.5vw;
+  }
+}
+
+@media (max-width: 420px) {
+  #legend {
+    transform: scale(.5, .5);
+    margin-top: -2vh;
+    margin-left: -11vw;
+  }
+}
+
+@media (max-width: 380px) {
+  #legend {
+    margin-top: -4vh;
+    margin-left: -11.5vw;
+  }
 }
 </style>
