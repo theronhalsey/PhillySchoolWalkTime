@@ -26,7 +26,7 @@ jobs:
         npm ci
         npm run build
 
-    - name: Deploy to atlas prod s3, Set index headers, and Invalidate Cloudfront
+    - name: Deploy to s3, Set index headers, and Invalidate Cloudfront
       env:
         AWS_DEFAULT_REGION: 'us-east-1'
         AWS_S3_BUCKET: phillywalktime
